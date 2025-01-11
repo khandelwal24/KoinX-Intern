@@ -36,7 +36,7 @@ const HeroSection = () => {
             "interval": "D",
             "timezone": "Etc/UTC",
             "theme": "light",
-            "style": "1",
+            "style": "3",
             "locale": "en",
             "allow_symbol_change": true,
             "calendar": false,

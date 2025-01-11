@@ -46,7 +46,7 @@ console.log('Hey Brookes',coin);
         {coin?.slice(0,8)?.map((v,i)=>{
             return(
                 <div key={i}>
-                    <SparklineCard key={i} price={v.item.data.price_btc} SparklineImgLink = {v.item.data.sparkline} logo={v.item.small} symbol={v.item.symbol}/>
+                    <SparklineCard key={i} priceChange={v.item.data.price_change_percentage_24h.usd} price={v.item.data.price_btc} SparklineImgLink = {v.item.data.sparkline} logo={v.item.small} symbol={v.item.symbol}/>
                 </div>
             )
         })}
