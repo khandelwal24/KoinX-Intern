@@ -115,7 +115,7 @@ const HeroSection = () => {
            
                 <div className='flex flex-col gap-2 my-4 px-2 relative'>
               
-                <input defaultValue="bitcoin" onKeyDown={(e)=>e.key==='enter'} type='text' placeholder='Search any coin' className='relative outline-none p-2 px-5 rounded-full' value={searchCoin} onChange={(e)=>setSearchCoin(e.target.value)} />
+                <input defaultValue="bitcoin" onKeyDown={(e)=>e.key==='enter'} type='text' placeholder='Search any coin write everthing in (lowercase)' className='relative outline-none p-2 px-5 rounded-full' value={searchCoin} onChange={(e)=>setSearchCoin(e.target.value)} />
                 <ImSearch onClick={()=>setCoin(searchCoin)} className='absolute hover:cursor-pointer right-4 top-3'/>
                 <p className='uppercase text-lg font-bold'>{Coin}</p>
                 
