@@ -125,7 +125,7 @@ const HeroSection = () => {
                 <p className='text-black font-mono text-sm'>&#8377; {price[Coin]?.inr}</p>
                 </div>
 
-                                    {Math.ceil(price.bitcoin?.usd_24h_change) < 0 ?
+                                    {Math.ceil(price[Coin]?.usd_24h_change) < 0 ?
                                      <span className='truncate bg-red-400 px-2 py-0.5 rounded-md'>
                                      <FaCaretDown className='text-md inline '/>
                                      {(price[Coin]?.usd_24h_change)%100}%
