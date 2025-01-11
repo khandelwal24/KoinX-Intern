@@ -15,17 +15,17 @@ const SparklineCard = ({SparklineImgLink,symbol,logo,price,priceChange}) => {
             <img className='h-10 w-10 rounded-full' src={logo}/>
             <p>{symbol}</p>
            {Math.ceil(priceChange) < 0 ?
-           <span className='truncate bg-red-400 px-2 py-0.5 rounded-md'>
-           <FaCaretDown className='text-md inline '/>
+           <span className='truncate text-sm bg-red-400 px-2 py-0.5 rounded-md'>
+           <FaCaretDown className='text-sm inline '/>
            {(priceChange)%100}%
           </span> :
-          <span className='truncate bg-green-400 px-2 py-0.5 rounded-md'>
-           <FaCaretUp className='text-md inline '/>
+          <span className='truncate text-sm bg-green-400 px-2 py-0.5 rounded-md'>
+           <FaCaretUp className='text-sm inline '/>
            {(priceChange)%100}%
           </span>  }
         </div>
-        <p className='text-xl font-semibold truncate'>${price}</p>
-        <img src={SparklineImgLink}/> 
+        <p className='text-lg font-semibold truncate'>${price}</p>
+        <img className='justify-self-center' src={SparklineImgLink}/> 
     </div>
 
   )
