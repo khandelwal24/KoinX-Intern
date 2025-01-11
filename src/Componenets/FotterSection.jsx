@@ -42,7 +42,7 @@ console.log('Hey Brookes',coin);
    
     <div className='grid relative inset-0 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 w-full gap-5 justify-center'>
 
-        {coin?.map((v,i)=>{
+        {coin?.slice(0,8)?.map((v,i)=>{
             return(
                 <div key={i}>
                     <SparklineCard key={i} price={v.item.data.price_btc} SparklineImgLink = {v.item.data.sparkline} logo={v.item.small} symbol={v.item.symbol}/>
