@@ -11,13 +11,17 @@ import Tokenomics from './Tokenomics.jsx';
 import Performance from './Performance.jsx';
 import { ImSearch } from "react-icons/im";
 import { toast, ToastContainer } from 'react-toastify';
-
+// import 'dotenv/config'
 
 
 const HeroSection = () => {
     
     const container = useRef();
-  
+    let [allcoin,setallcoin] = useState([]);
+    let [Coin,setCoin] = useState('bitcoin');
+    let [price,setprice] = useState([]);
+    const[searchCoin, setSearchCoin] = useState('bitcoin');
+
     useEffect(
       () => {
         const script = document.createElement("script");
@@ -40,7 +44,7 @@ const HeroSection = () => {
           }`;
         container.current.appendChild(script);
       },
-      []
+      [setCoin]
     );
 
 
@@ -48,16 +52,12 @@ const HeroSection = () => {
       
       
     
-    let [allcoin,setallcoin] = useState([]);
-    let [Coin,setCoin] = useState('bitcoin');
-    let [price,setprice] = useState([]);
-    const[searchCoin, setSearchCoin] = useState('bitcoin');
-
+   
     
     const Prices = {
         method: 'GET',
         url: `https://api.coingecko.com/api/v3/simple/price?ids=${Coin}&vs_currencies=usd%2Cinr&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=true&precision=2`,
-        headers: {accept: 'application/json', 'x-cg-api-key': 'CG-5kvMEQKUBZSVBV8kRVboGJop'}
+        headers: {accept: 'application/json', 'x-cg-api-key': import.meta.env.VITE_APIKEY}
       };
 
 
@@ -79,7 +79,7 @@ const HeroSection = () => {
     const options = {
         method: 'GET',
         url: 'https://api.coingecko.com/api/v3/search/trending',
-        headers: {accept: 'application/json', 'x-cg-api-key': 'CG-5kvMEQKUBZSVBV8kRVboGJop'}
+        headers: {accept: 'application/json', 'x-cg-api-key': import.meta.env.VITE_APIKEY}
     };
 
     useEffect(()=>{
@@ -100,7 +100,7 @@ const HeroSection = () => {
 
 
   return (
-    <div className='w-[100%] py-5 mt-10'>
+    <div className='w-[100%] py-5 mt-14'>
     <ToastContainer position='top-center' autoClose={1000} theme='dark'/>
     <div className='max-w-[1240px] mx-auto px-3'>
     

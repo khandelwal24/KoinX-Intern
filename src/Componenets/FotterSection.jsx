@@ -5,12 +5,13 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { Carousel,Flowbite } from "flowbite-react";
 
+
 const FotterSection = () => {
 
     const options = {
         method: 'GET',
         url: 'https://api.coingecko.com/api/v3/search/trending',
-        headers: {accept: 'application/json', 'x-cg-api-key': 'CG-5kvMEQKUBZSVBV8kRVboGJop'}
+        headers: {accept: 'application/json', 'x-cg-api-key': import.meta.env.VITE_APIKEY }
     };
 
     const [coin,setcoin] = useState([]);
