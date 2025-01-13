@@ -25,7 +25,7 @@ const SparklineCard = ({SparklineImgLink,symbol,logo,price,priceChange}) => {
           </span>  }
         </div>
         <p className='text-lg font-semibold truncate'>${price}</p>
-        <img className='justify-self-center' src={SparklineImgLink}/> 
+        <img className='justify-self-center' src={SparklineImgLink}/>
     </div>
 
   )

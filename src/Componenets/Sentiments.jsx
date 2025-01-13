@@ -2,6 +2,7 @@ import React from 'react'
 import { FaExclamationCircle } from "react-icons/fa";
 import { FaRegNewspaper } from "react-icons/fa6";
 import Card from './Card';
+import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons/io';
 
 const Sentiments = () => {
   return (
@@ -12,7 +13,7 @@ const Sentiments = () => {
             
 
             {/* ////Crousal aayega.. yaha  */}
-            <div className='grid w-full md:grid-cols-2 grid-cols-1 gap-5 my-4 '>
+            <div className='grid w-full relative inset-0 md:grid-cols-2 grid-cols-1 gap-5 my-4 '>
 
       {/* Blue Card */}
       <Card
@@ -29,6 +30,9 @@ const Sentiments = () => {
         icon="📈"
         color="bg-green-500"
       />
+
+     
+      <IoIosArrowDropright className='text-3xl hidden md:block font-bold absolute right-2 top-[45%] hover:cursor-pointer hover:scale-125 duration-200 ease-in-out transition-all'/>
 
             </div>
             
